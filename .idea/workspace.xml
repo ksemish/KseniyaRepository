@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08e934fc-874b-40bc-b528-6f1cde6f1acb" name="Default" comment="" />
+    <list default="true" id="08e934fc-874b-40bc-b528-6f1cde6f1acb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewContact.py" afterPath="$PROJECT_DIR$/NewContact.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +38,8 @@
       <file leaf-file-name="NewContact.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewContact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="2055">
+              <caret line="137" column="26" lean-forward="false" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
               <folding>
                 <element signature="e#24#82#0" expanded="true" />
               </folding>
@@ -213,8 +215,8 @@
     <history-entry file="Unittests_in_NewContact_py - 2017.08.01 at 14h 22m 03s.xml">
       <configuration name="Unittests in NewContact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_FirstTest_py - 2017.08.01 at 03h 09m 16s.xml">
-      <configuration name="py.test in FirstTest.py" configurationId="tests" />
+    <history-entry file="Unittests_in_NewContact_py - 2017.08.01 at 14h 34m 03s.xml">
+      <configuration name="Unittests in NewContact.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_FirstTest_py - 2017.08.01 at 03h 09m 50s.xml">
       <configuration name="py.test in FirstTest.py" configurationId="tests" />
@@ -293,8 +295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewContact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        <state relative-caret-position="2055">
+          <caret line="137" column="26" lean-forward="false" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
           <folding>
             <element signature="e#24#82#0" expanded="true" />
           </folding>
