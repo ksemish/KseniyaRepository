@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08e934fc-874b-40bc-b528-6f1cde6f1acb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewContact.py" afterPath="$PROJECT_DIR$/NewContact.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FirstTest.py" afterPath="$PROJECT_DIR$/FirstTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.py" afterPath="$PROJECT_DIR$/application.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,21 @@
       <file leaf-file-name="FirstTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FirstTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="195">
+              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
               <folding>
-                <element signature="e#24#82#0" expanded="true" />
+                <element signature="e#25#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupApplication.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GroupApplication.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-35">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -38,21 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application.py">
+      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <state relative-caret-position="60">
+              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
+      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="446" column="8" lean-forward="false" selection-start-line="446" selection-start-column="8" selection-end-line="446" selection-end-column="8" />
+            <state relative-caret-position="285">
+              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -84,11 +94,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/group.py" />
-        <option value="$PROJECT_DIR$/FirstTest.py" />
         <option value="$PROJECT_DIR$/geckodriver.log" />
         <option value="$PROJECT_DIR$/contact.py" />
         <option value="$PROJECT_DIR$/NewContact.py" />
         <option value="$PROJECT_DIR$/application.py" />
+        <option value="$PROJECT_DIR$/GroupApplication.py" />
+        <option value="$PROJECT_DIR$/FirstTest.py" />
       </list>
     </option>
   </component>
@@ -152,7 +163,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.NewContact">
+  <component name="RunManager" selected="Python tests.py.test in FirstTest.py">
+    <configuration name="GroupApplication" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KseniyaRepository" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GroupApplication.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="NewContact" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -170,18 +198,81 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Unittests in NewContact.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="NewContact" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="KseniyaRepository" />
+      <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/NewContact.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KseniyaRepository" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KseniyaRepository" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KseniyaRepository" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KseniyaRepository" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="py.test in FirstTest.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -199,16 +290,17 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/FirstTest.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in FirstTest.py" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in NewContact.py" />
-      <item index="2" class="java.lang.String" itemvalue="Python.NewContact" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.NewContact" />
+      <item index="1" class="java.lang.String" itemvalue="Python.NewContact" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in FirstTest.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python.GroupApplication" />
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.NewContact" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in NewContact.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in FirstTest.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in FirstTest.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.GroupApplication" />
+        <item index="2" class="java.lang.String" itemvalue="Python.NewContact" />
       </list>
     </recent_temporary>
   </component>
@@ -226,23 +318,8 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_NewContact_py - 2017.08.01 at 15h 38m 17s.xml">
-      <configuration name="Unittests in NewContact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_NewContact_py - 2017.08.01 at 15h 38m 57s.xml">
-      <configuration name="Unittests in NewContact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_NewContact_py - 2017.08.01 at 15h 39m 22s.xml">
-      <configuration name="Unittests in NewContact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_NewContact_py - 2017.08.10 at 14h 38m 01s.xml">
-      <configuration name="Unittests in NewContact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_NewContact_py - 2017.08.10 at 14h 38m 28s.xml">
-      <configuration name="Unittests in NewContact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_NewContact_py - 2017.08.10 at 14h 40m 05s.xml">
-      <configuration name="Unittests in NewContact.py" configurationId="tests" />
+    <history-entry file="NewContact - 2017.08.10 at 15h 56m 17s.xml">
+      <configuration name="NewContact" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_NewContact_py - 2017.08.10 at 14h 41m 02s.xml">
       <configuration name="Unittests in NewContact.py" configurationId="tests" />
@@ -255,6 +332,21 @@
     </history-entry>
     <history-entry file="Unittests_in_NewContact_py - 2017.08.10 at 14h 47m 37s.xml">
       <configuration name="Unittests in NewContact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.08.10 at 15h 26m 23s.xml">
+      <configuration name="Unnamed" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_FirstTest_py - 2017.08.10 at 15h 55m 06s.xml">
+      <configuration name="py.test in FirstTest.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_FirstTest_py - 2017.08.10 at 16h 08m 18s.xml">
+      <configuration name="py.test in FirstTest.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_FirstTest_py - 2017.08.10 at 16h 08m 45s.xml">
+      <configuration name="py.test in FirstTest.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_FirstTest_py - 2017.08.10 at 16h 09m 12s.xml">
+      <configuration name="py.test in FirstTest.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -303,7 +395,7 @@
         <state relative-caret-position="450">
           <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding>
-            <element signature="e#24#82#0" expanded="true" />
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -341,16 +433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FirstTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding>
-            <element signature="e#24#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2475">
@@ -362,14 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -390,6 +464,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NewContact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -400,10 +490,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application.py">
+    <entry file="file://$PROJECT_DIR$/FirstTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="195">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GroupApplication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
