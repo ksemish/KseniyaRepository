@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08e934fc-874b-40bc-b528-6f1cde6f1acb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FirstTest.py" afterPath="$PROJECT_DIR$/FirstTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.py" afterPath="$PROJECT_DIR$/application.py" />
-    </list>
+    <list default="true" id="08e934fc-874b-40bc-b528-6f1cde6f1acb" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +26,8 @@
       <file leaf-file-name="GroupApplication.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GroupApplication.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="18" column="76" lean-forward="true" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -48,21 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/group.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/group.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -321,9 +318,6 @@
     <history-entry file="NewContact - 2017.08.10 at 15h 56m 17s.xml">
       <configuration name="NewContact" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_NewContact_py - 2017.08.10 at 14h 41m 02s.xml">
-      <configuration name="Unittests in NewContact.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_NewContact_py - 2017.08.10 at 14h 42m 53s.xml">
       <configuration name="Unittests in NewContact.py" configurationId="tests" />
     </history-entry>
@@ -346,6 +340,9 @@
       <configuration name="py.test in FirstTest.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_FirstTest_py - 2017.08.10 at 16h 09m 12s.xml">
+      <configuration name="py.test in FirstTest.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_FirstTest_py - 2017.08.10 at 16h 16m 00s.xml">
       <configuration name="py.test in FirstTest.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -464,6 +461,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NewContact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -480,16 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewContact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FirstTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -502,8 +499,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GroupApplication.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="18" column="76" lean-forward="true" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
           <folding />
         </state>
       </provider>
