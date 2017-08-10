@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from group import Group
-from GroupApplication import GroupApplication
+
+from fixture.GroupApplication import GroupApplication
+from models.group import Group
+
 
 @pytest.fixture
 def appgroup(request):
