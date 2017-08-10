@@ -14,13 +14,14 @@ def appgroup(request):
 
 def test_FullForm(appgroup):
         success = True
-        appgroup.login(user="admin", pas="secret")
+        appgroup.session.login(user="admin", pas="secret")
         appgroup.create_new_group(Group(name="name", header="logo", footer="comment"))
-        appgroup.logout()
+        appgroup.session.logout()
 
 def test_EmptyForm(appgroup):
         success = True
-        appgroup.login(user="admin", pas="secret")
+        appgroup.session.login(user="admin", pas="secret")
         appgroup.create_new_group(Group(name="", header="", footer=""))
-        appgroup.logout()
+        appgroup.session.logout()
+
 
