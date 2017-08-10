@@ -2,26 +2,26 @@
 
 import pytest
 
-from fixture.GroupApplication import GroupApplication
+from fixture.Application import Application
 from models.group import Group
 
 
 @pytest.fixture
-def appgroup(request):
-    fixture = GroupApplication()
-    request.addfinalizer(fixture.destroygrouptest)
+def app(request):
+    fixture = Application()
+    request.addfinalizer(fixture.destroy)
     return fixture
 
-def test_FullForm(appgroup):
+def test_FullForm(app):
         success = True
-        appgroup.session.login(user="admin", pas="secret")
-        appgroup.create_new_group(Group(name="name", header="logo", footer="comment"))
-        appgroup.session.logout()
+        app.session.login(user="admin", pas="secret")
+        app.groups.create(Group(name="name", header="logo", footer="comment"))
+        app.session.logout()
 
-def test_EmptyForm(appgroup):
+def test_EmptyForm(app):
         success = True
-        appgroup.session.login(user="admin", pas="secret")
-        appgroup.create_new_group(Group(name="", header="", footer=""))
-        appgroup.session.logout()
+        app.session.login(user="admin", pas="secret")
+        app.groups.create(Group(name="", header="", footer=""))
+        app.session.logout()
 
 
