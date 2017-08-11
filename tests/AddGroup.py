@@ -8,6 +8,7 @@ def test_FullForm(app):
         app.groups.create(Group(name="name", header="logo", footer="comment"))
         app.session.logout()
 
+
 def test_EmptyForm(app):
         success = True
         app.session.login(user="admin", pas="secret")
