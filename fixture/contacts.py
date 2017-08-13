@@ -90,13 +90,14 @@ class ContactHelper:
     def test_delete_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
-        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.find_element_by_css_selector("input[value='Delete']").click()
+        wd.switch_to_alert().accept()
 
     def test_edit_first_contact(self, Contacts):
         wd = self.app.wd
         # select contact
         wd.find_element_by_name("selected[]").click()
-        #submit edit
+        #submit edit4
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
         # fill name of contact
         wd.find_element_by_name("firstname").click()
