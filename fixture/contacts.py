@@ -3,6 +3,9 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
+    def open_home_page(self):
+        wd = self.wd
+
     def change_contact_field(self, contact_field_name, text):
         wd = self.app.wd
         if text is not None:
@@ -69,6 +72,10 @@ class ContactHelper:
         wd.find_element_by_name("update").click()
         # return to homepage
         wd.find_element_by_link_text("home page").click()
+
+    def count_contact(self):
+        wd = self.app.wd
+        return len(wd.find_elements_by_name("selected[]"))
 
 
 
