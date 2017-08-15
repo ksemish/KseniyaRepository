@@ -3,8 +3,10 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
-    def open_home_page(self):
-        wd = self.wd
+    def open_contacts_page(self):
+        wd = self.app.wd
+        if not (wd.current_url.endswith("/index.php") and len(wd.find_elements_by_name("group")) > 0):
+            wd.find_element_by_link_text("home").click
 
     def change_contact_field(self, contact_field_name, text):
         wd = self.app.wd
@@ -15,6 +17,7 @@ class ContactHelper:
 
     def create_contact(self, Contacts):
         wd = self.app.wd
+        self.open_contacts_page()
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(Contacts)
         # submit_create_contact
@@ -56,12 +59,14 @@ class ContactHelper:
 
     def test_delete_first_contact(self):
         wd = self.app.wd
+        self.open_contacts_page()
         self.select_first_contact()
         wd.find_element_by_css_selector("input[value='Delete']").click()
         wd.switch_to_alert().accept()
 
     def test_edit_first_contact(self, new_contact_data):
         wd = self.app.wd
+        self.open_contacts_page()
         # select contact
         self.select_first_contact()
         #submit edit
@@ -75,6 +80,7 @@ class ContactHelper:
 
     def count_contact(self):
         wd = self.app.wd
+        self.open_contacts_page()
         return len(wd.find_elements_by_name("selected[]"))
 
 
