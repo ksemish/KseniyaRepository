@@ -1,5 +1,7 @@
-class ContactHelper:
+from models.contact import Contacts
 
+
+class ContactHelper:
     def __init__(self, app):
         self.app = app
 
@@ -52,7 +54,6 @@ class ContactHelper:
         # fill comments
         self.change_contact_field("notes", Contacts.notes)
 
-
     def select_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
@@ -63,13 +64,14 @@ class ContactHelper:
         self.select_first_contact()
         wd.find_element_by_css_selector("input[value='Delete']").click()
         wd.switch_to_alert().accept()
+        self.open_contacts_page()
 
     def test_edit_first_contact(self, new_contact_data):
         wd = self.app.wd
         self.open_contacts_page()
         # select contact
         self.select_first_contact()
-        #submit edit
+        # submit edit
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
         # fill name of contact
         self.fill_contact_form(new_contact_data)
@@ -83,5 +85,14 @@ class ContactHelper:
         self.open_contacts_page()
         return len(wd.find_elements_by_name("selected[]"))
 
-
-
+    def get_contact_list(self):
+        wd = self.app.wd
+        self.open_contacts_page()
+        contacts = []
+        for element in wd.find_elements_by_name("entry"):
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            cells = element.find_elements_by_tag_name("td")
+            lname = cells[1].text
+            fname = cells[2].text
+            contacts.append(Contacts(firstname=fname, lastname=lname, id=id))
+        return contacts
