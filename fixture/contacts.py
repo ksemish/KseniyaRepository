@@ -7,8 +7,9 @@ class ContactHelper:
 
     def open_contacts_page(self):
         wd = self.app.wd
-        if not (wd.current_url.endswith("/index.php") and len(wd.find_elements_by_name("group")) > 0):
-            wd.find_element_by_link_text("home").click
+        #if not (wd.current_url.endswith("/index.php") and len(wd.find_elements_by_name("group")) > 0):
+        #    wd.find_element_by_link_text("home").click()
+        wd.get('http://localhost/addressbook/index.php')
 
     def change_contact_field(self, contact_field_name, text):
         wd = self.app.wd
@@ -90,9 +91,9 @@ class ContactHelper:
         self.open_contacts_page()
         contacts = []
         for element in wd.find_elements_by_name("entry"):
-            id = element.find_element_by_name("selected[]").get_attribute("value")
             cells = element.find_elements_by_tag_name("td")
-            lname = cells[1].text
-            fname = cells[2].text
-            contacts.append(Contacts(firstname=fname, lastname=lname, id=id))
+            lastname = cells[1].text
+            firstname = cells[2].text
+            contact_id = element.find_element_by_name("selected[]").get_attribute("value")
+            contacts.append(Contacts(id=contact_id,lastname=lastname, firstname=firstname))
         return contacts

@@ -1,4 +1,5 @@
 from sys import maxsize
+
 class Contacts:
    def __init__(self, firstname=None, middlename=None, lastname=None, nickname=None, company=None,
                  address_new_company=None, home=None, mobile=None, work=None, fax=None, email1=None,
@@ -22,11 +23,13 @@ class Contacts:
       self.id = id
 
    def __repr__(self):
-      return "%s:%s:s%" % (self.id, self.firstname, self.lastname)
+      return "%s: %s: %s" % (self.id,self.lastname, self.firstname)
 
    def __eq__(self, other):
-      return (self.id is None or other.id is None or self.id == other.id) and self.firstname == other.name and self.lastname == other.name
+      return (self.id is None or other.id is None or self.id == other.id) and self.lastname == other.lastname and self.firstname == other.firstname
 
-
-
-
+   def contact_id_or_max(self):
+        if self.id:
+            return int(self.id)
+        else:
+            return maxsize
