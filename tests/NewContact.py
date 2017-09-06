@@ -4,9 +4,10 @@ from sys import maxsize
 def test_NewContact(app):
     old_contacts = app.contacts.get_contact_list()
     contact = Contacts("Firstname", "Name", "Lastname", "New Test User",
-                                            "New Company", "Address new company", "12345",
-                                            "4567", "789", "234", "one@gmail.com", "two@gmail.com",
-                                            "three@gmail.com", "secondary address", "home address", "comments")
+                       "New Company", "Address new company", "home - 8(495)777-77-77",
+                       "work - 8(495)555-55-55", "mobile - 89034567890", "fax - 8(495)456 123 45",
+                       "one@gmail.com", "two@gmail.com",
+                       "three@gmail.com", "secondary address", "homephone - 8(495)456 123 45", "comments")
     app.contacts.create_contact(contact)
     assert len(old_contacts) + 1 == app.contacts.count_contact()
     new_contacts = app.contacts.get_contact_list()
