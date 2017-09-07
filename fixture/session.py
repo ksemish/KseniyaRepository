@@ -37,11 +37,11 @@ class SessionHelper:
         if self.is_logged_in():
             self.logout()
 
-    def ensure_login(self, user, pas):
+    def ensure_login(self, username, password):
         wd = self.app.wd
         if self.is_logged_in():
-            if self.is_logged_in_as(user):
+            if self.is_logged_in_as(username):
                 return
             else:
                 self.logout()
-        self.login(user, pas)
+        self.login(username, password)
