@@ -21,6 +21,7 @@ testdata = [
     for footer in ["", random_string("footer", 20)]
 ]
 
+
 @pytest.mark.parametrize("group", testdata, ids=[repr(x) for x in testdata])
 def test_FullForm(app, group):
         old_groups = app.groups.get_group_list()
