@@ -61,9 +61,14 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
 
-    def select_contact_by_index(self, index):
+    def select_contact_by_index(self, id):
         wd = self.app.wd
-        wd.find_elements_by_name("selected[]")[index].click()
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//input[@value='%s']" % id).click()
+
 
     def test_delete_first_contact(self):
         self.test_delete_contact_by_index(0)
@@ -77,15 +82,25 @@ class ContactHelper:
         self.open_contacts_page()
         self.contact_cache = None
 
+    def test_delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.open_contacts_page()
+        self.select_contact_by_id(id)
+        wd.find_element_by_css_selector("input[value='Delete']").click()
+        wd.switch_to_alert().accept()
+        self.open_contacts_page()
+        self.contact_cache = None
+
     # def test_edit_first_contact(self):
     #     self.test_edit_contact_by_index(0)
 
-    def open_contact_edit_form(self, wd, index):
+    def open_contact_edit_form(self, wd, id):
         self.open_contacts_page()
         # select contact
-        self.select_contact_by_index(index)
+        self.select_contact_by_id(id)
         # submit edit
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(index + 2) + "]/td[8]/a").click()
+        # wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(id + 2) + "]/td[8]/a").click()
+        wd.get("http://localhost/addressbook/edit.php?"+ 'id=' + id)
 
     def open_contact_view_page(self, wd, index):
         self.open_contacts_page()
@@ -97,6 +112,17 @@ class ContactHelper:
     def test_edit_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.open_contact_edit_form(wd, index)
+        # fill name of contact
+        self.fill_contact_form(new_contact_data)
+        # submit editing
+        wd.find_element_by_name("update").click()
+        # return to homepage
+        wd.find_element_by_link_text("home page").click()
+        self.contact_cache = None
+
+    def test_edit_contact_by_id(self, id, new_contact_data):
+        wd = self.app.wd
+        self.open_contact_edit_form(wd, id)
         # fill name of contact
         self.fill_contact_form(new_contact_data)
         # submit editing
