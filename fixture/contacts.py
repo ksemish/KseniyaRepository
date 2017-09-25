@@ -149,11 +149,13 @@ class ContactHelper:
                 firstname = cells[2].text
                 address = cells[3].text
                 id = element.find_element_by_name("selected[]").get_attribute("value")
-                all_phones = cells[5].text
-                all_emails = cells[4].text
-                self.contact_cache.append(Contacts(id=id, lastname=lastname, firstname=firstname, address=address,
-                                                   all_emails_from_home_page=all_emails, all_phones_from_home_page=all_phones))
+                all_phones = cells[5].text.replace('\n', '')
+                all_emails = cells[4].text.replace('\n', '')
+                new_contact = self.clean_spaces(Contacts(id=id, firstname=firstname, lastname=lastname,
+                           address=address, all_emails_from_home_page=all_emails, all_phones_from_home_page=all_phones))
+                self.contact_cache.append(new_contact)
         return list(self.contact_cache)
+
 
     def get_contact_info_from_edit_page(self, index):
         wd = self.app.wd
@@ -182,4 +184,12 @@ class ContactHelper:
         work = re.search("W: (.*)", text).group(1)
         homephone = re.search("P: (.*)", text).group(1)
         return Contacts(home=home, work=work, mobile=mobile, homephone=homephone)
+
+    @staticmethod
+    def clean_spaces(contact):
+        for k, v in contact.__dict__.items():
+            if v is not None:
+                setattr(contact, k, v.replace(' ', ''))
+
+        return contact
 

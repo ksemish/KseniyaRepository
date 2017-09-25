@@ -1,7 +1,7 @@
 import mysql.connector
 from models.group import Group
 from models.contact import Contacts
-
+from fixture.contacts import ContactHelper
 
 class DbFixture:
 
@@ -29,11 +29,17 @@ class DbFixture:
         list = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("select id, firstname, middlename, lastname, nickname, company, address from addressbook where deprecated='0000-00-00 00:00:00'")
+            cursor.execute("select id, firstname, lastname, address, phone2, mobile, work, home, email, email2, email3"
+                           " from addressbook where deprecated='0000-00-00 00:00:00'")
             for row in cursor:
-                (id, firstname, middlename, lastname, nickname, company, address) = row
-                list.append(Contacts(id=str(id), firstname=firstname, middlename=middlename, lastname=lastname,
-                                     nickname=nickname, company=company, address=address))
+                (id, firstname, lastname, address, phone2, mobile, work, home, email, email2, email3) = row
+                all_phones = home+mobile+work+phone2
+                all_emails = email+email2+email3
+                new_contact = ContactHelper.clean_spaces(Contacts(id=str(id), firstname=firstname, lastname=lastname, address=address,
+                                     all_phones_from_home_page=all_phones,
+                                     all_emails_from_home_page=all_emails))
+
+                list.append(new_contact)
         finally:
             cursor.close()
         return list
