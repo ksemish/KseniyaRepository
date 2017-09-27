@@ -1,5 +1,8 @@
 from models.contact import Contacts
 import re
+from selenium.webdriver.support.ui import Select
+from models.group import Group
+import random
 
 
 class ContactHelper:
@@ -29,6 +32,17 @@ class ContactHelper:
         wd.find_element_by_xpath("//div/div[4]/div/i/a[2]").click()
         self.contact_cache = None
 
+    # def create_contact_with_group(self, Contacts, group):
+    #     wd = self.app.wd
+    #     group_id = self.choose_random_group_id()
+    #     self.open_contacts_page()
+    #     wd.find_element_by_link_text("add new").click()
+    #     self.add_contact_into_group(Contacts, group)
+    #     # submit_create_contact
+    #     wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+    #     wd.find_element_by_xpath("//div/div[4]/div/i/a[2]").click()
+    #     self.contact_cache = None
+
     def fill_contact_form(self, Contacts):
         wd = self.app.wd
         # fill name of contact
@@ -57,6 +71,78 @@ class ContactHelper:
         # fill comments
         self.change_contact_field("notes", Contacts.notes)
 
+    def choose_random_contact_id(self):
+        contact_list = self.get_contact_list()
+        randomcontact = random.choice(contact_list)
+        return randomcontact.id
+
+    def choose_random_group_id(self):
+        from fixture.groups import GroupHelper
+        gh = GroupHelper(self.app)
+        group_list = gh.get_group_list()
+        randomgroup = random.choice(group_list)
+        return randomgroup.id
+
+    def add_random_contact_into_group(self, group_id):
+        contact_id = self.choose_random_contact_id()
+        self.open_contacts_page()
+        contact_id = self.select_contact_by_id(contact_id)
+        contact = self.add_contact_into_group(group_id, contact_id)
+
+        return contact
+
+    def add_contact_into_group(self, group_id, contact_id):
+        wd = self.app.wd
+        select = Select(wd.find_element_by_xpath("//select[@name='to_group']"))
+        select.select_by_value(group_id)
+        wd.find_element_by_name("add").click()
+        return[group_id, contact_id]
+
+    def open_group_with_contact(self, group_id):
+        wd = self.app.wd
+        wd.get("http://localhost/addressbook/index.php?" + 'group=' + group_id)
+
+    def get_contacts_in_group(self, group_id):
+        wd = self.app.wd
+        self.open_group_with_contact(group_id)
+        id_list = []
+        contacts_in_group = wd.find_elements_by_name("selected[]")
+        for contact in contacts_in_group:
+            id_list.append(contact.get_attribute("value"))
+        return id_list
+
+    def contact_in_group(self, result, group_id):
+        self.open_group_with_contact(result[1])
+        contacts = self.get_contacts_in_group(group_id)
+        success = 0
+        for contact in contacts:
+            if contact == result[0]:
+                success = 1
+                break
+        assert(success == 1)
+
+    # open_random_group_page
+    def open_groups_list(self, group_id):
+        wd = self.app.wd
+        self.open_contacts_page()
+        select = Select(wd.find_element_by_xpath("//select[@name='group']"))
+        select.select_by_value(group_id)
+
+    # def test_delete_contact_from_group(self):
+    #     wd = self.app.wd
+    #     contact_id = self.choose_random_contact_id()
+    #     group_id = self.choose_random_group_id()
+    #     self.open_groups_list(group_id)
+    #     self.select_contact_by_id(contact_id)
+    #     wd.find_element_by_css_selector("input[name='remove']").click()
+    #     self.contact_cache = None
+
+    def test_delete_contact_from_group(self, group_id, contact_id):
+        wd = self.app.wd
+        self.open_groups_list(group_id)
+        self.select_contact_by_id(contact_id)
+        wd.find_element_by_css_selector("input[name='remove']").click()
+
     def select_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
@@ -65,9 +151,10 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_css_selector("input[value='%s']" % id).click()
 
-    def select_contact_by_id(self, id):
+    def select_contact_by_id(self, eid):
         wd = self.app.wd
-        wd.find_element_by_xpath("//input[@value='%s']" % id).click()
+        wd.find_element_by_xpath("//input[@value='%s']" % eid).click()
+        return eid
 
 
     def test_delete_first_contact(self):
